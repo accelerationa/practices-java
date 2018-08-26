@@ -3,6 +3,18 @@ package com.company;
 
 import java.util.concurrent.*;
 
+/*
+* @Future:
+*   Future: Future.get(): blocking wait
+*   Future.isDone() is non-blocking, you can check isDone() the use .get() if you want
+*   get(long timeout, TimeUnit unit) will only block for a specified time out.
+*   By using Future, callable with scheduledExecutorService, you can pass the exception to main and handle from there
+*
+* @Callable
+*   Compared to Runnable, Callable can throw exceptions and return values
+*   The returned can be processed using Future
+* */
+
 public class CallableWithFuture {
     private static final int TIME = 1;
 
